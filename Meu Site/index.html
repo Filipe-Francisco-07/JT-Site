@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Jogos</title>
+  </head>
+  <body id="body">
+    <header class="header">
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <li><button class="botao"><a href="#">Início</a></button></li>
+                    <li><button onclick="rolarTela(this)" id="sobre1" class="botao"><a>Sobre</a></button></li>
+                    <li><button id="darkmode" style="background: linear-gradient(135deg, #3fcd75, #39b902)" onclick="modoEscuro()" class="botao"><a>Modo Escuro</a></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <h1 class="h1">Neste site contarei um pouco sobre meus jogos favoritos, para ser <br> encaminhado à descrição de um jogo específico, apenas clique<br> nele, ou selecione um jogo aleatório clicando no botão abaixo:</h1>
+    <br>
+    
+    <div style="display: flex; justify-content: center;">
+        <button style="max-width: 20%;" onclick="jogoAleatorio()" class="botao"><a>Jogo aleatório</a></button>
+    </div>
+    <br>
+    <div class="jogos" id="game">
+        <div class="jogo">
+            <img onclick="rolarTela(this)" id="img_eldenring" src="https://assets.xboxservices.com/assets/7b/54/7b54f5e4-0857-4ce3-8a18-2b8c431e8a9e.jpg?n=Elden-Ring_GLP-Page-Hero-0_1083x1222_01.jpg" alt="Elden Ring">
+            <p>Elden Ring</p>
+        </div>
+        <div class="jogo">
+            <img onclick="rolarTela(this)" id="img_darksouls" src="https://image.api.playstation.com/cdn/UP0700/CUSA03388_00/v8JlD8KcQUtTqaLBmpFnj1ESRR5zMkLk.png" alt="Dark Souls III">
+            <p>Dark Souls III</p>
+        </div>
+        <div class="jogo">
+            <img id="img_cs2" onclick="rolarTela(this)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTE1sZe_fSDZFP33Is-lV31IorUe0Qh56Lrg&s" alt="cs2">
+            <p>Counter-Strike 2</p>
+        </div>
+    </div>
+
+    <div class="jogos">
+        <div class="jogo">
+            <img onclick="rolarTela(this)" id="img_reddead" src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt="Red Dead">
+            <p>Red Dead Redemption II</p>
+        </div>
+        <div class="jogo">
+            <img onclick="rolarTela(this)" id="img_dyinglight" src="https://cdn1.epicgames.com/offer/2c42520d342a46d7a6e0cfa77b4715de/EGS_DyingLightStandardEdition_Techland_Editions_S2_1200x1600-49546d7deaaf160596e034613a2d2a93" alt="Dying Light">
+            <p>Dying Light</p>
+        </div>
+        <div class="jogo">
+            <img onclick="rolarTela(this)" id="img_dayz" src="https://image.api.playstation.com/vulcan/ap/rnd/202301/0312/z9AGStZnUt3o3nbxJUrCjkyM.png" alt="DayZ">
+            <p>DayZ</p>
+        </div>
+    </div>
+    
+    <hr class="separa">
+    <div style="display: flex; justify-content: center;">
+        <button class="botao" style="max-width: 20%;" onclick="traduzirTexto()">Traduzir texto</button>
+    </div>
+    <div class="jogos" id="eld_por" style="display: block;">
+        <div class="jogo_unico" id="eldenring">
+            <a><img id="eldenring" src="https://assets.xboxservices.com/assets/7b/54/7b54f5e4-0857-4ce3-8a18-2b8c431e8a9e.jpg?n=Elden-Ring_GLP-Page-Hero-0_1083x1222_01.jpg" alt="Elden Ring"></a>
+            <div class="texto_descricao">
+                <h1>Elden Ring</h1>
+                <p>
+                    Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.
+                    <br><br>        
+                    Um mundo vasto onde campos abertos e uma variedade de situações e masmorras imensas, com complexos designs tridimensionais se conectam com fluidez. Conforme explora, sinta a alegria de descobrir poderosas e desconhecidas ameaças que aguardam por você, levando a um grande senso de conquista.
+                    <br><br>
+                    Uma história cheia de camadas, contada em fragmentos. Um drama épico onde os vários pensamentos dos personagens se interligam nas Terras Intermédias.
+                </p>
+            </div>
+        </div>   
+    </div>
+    <div class="jogos" id="eld_eng" style="display: none;">
+        <div class="jogo_unico" id="eldenring2">
+            <a><img id="eldenring" src="https://assets.xboxservices.com/assets/7b/54/7b54f5e4-0857-4ce3-8a18-2b8c431e8a9e.jpg?n=Elden-Ring_GLP-Page-Hero-0_1083x1222_01.jpg" alt="Elden Ring"></a>
+            <div class="texto_descricao">
+                <h1>Elden Ring</h1>
+                <p>
+                    Arise, Tainted One, and be guided by grace to wield the power of the Pristine Ring and become a Pristine Lord in the Lands Between.
+                    <br><br>        
+                    A vast world where open fields and a variety of situations and immense dungeons with complex three-dimensional designs connect fluidly. As you explore, feel the joy of discovering powerful and unknown threats that await you, leading to a great sense of achievement.
+                    <br><br>
+                    A story full of layers, told in fragments. An epic drama where the characters' various thoughts interconnect in the Intermediate Lands.
+                </p>
+            </div>
+        </div>   
+    </div>
+
+    <div class="jogos" id="dark_por" style="display: block;">
+        <div class="jogo_unico" id="darksouls">
+            <a><img src="https://image.api.playstation.com/cdn/UP0700/CUSA03388_00/v8JlD8KcQUtTqaLBmpFnj1ESRR5zMkLk.png" alt="Dark Souls III"></a>
+
+            <div class="texto_descricao">
+                <h1>Dark Souls III</h1>
+                <p>
+                    O jogo segue um personagem insensível em uma missão para impedir o fim do mundo. É jogado em uma perspectiva de terceira pessoa, e os jogadores têm acesso a várias armas, armaduras, magia e consumíveis que podem usar para lutar contra seus inimigos.
+                    <br><br>
+                    Com o fogo se apagando e o mundo caindo em ruínas, você precisa se aventurar em um universo repleto de inimigos e ambientes colossais. Jogadores entrarão em um mundo de trevas e atmosfera épica, com uma jogabilidade mais ágil e combates mais intensos.
+                    Agora só restam cinzas... Prepare-se para abraçar a escuridão mais uma vez!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="jogos" id="dark_eng" style="display: none;">
+        <div class="jogo_unico" id="darksouls2">
+            <a><img src="https://image.api.playstation.com/cdn/UP0700/CUSA03388_00/v8JlD8KcQUtTqaLBmpFnj1ESRR5zMkLk.png" alt="Dark Souls III"></a>
+
+            <div class="texto_descricao">
+                <h1>Dark Souls III</h1>
+                <p>
+                    The game follows a callous character on a mission to stop the end of the world. It is played in a third-person perspective, and players have access to various weapons, armor, magic, and consumables that they can use to fight their enemies.
+                    <br><br>
+                    With the fire going out and the world falling into ruins, you must venture into a universe full of enemies and colossal environments. Players will enter a world of darkness and an epic atmosphere, with more agile gameplay and more intense combat.
+                    Now only ashes remain... Prepare to embrace the darkness once again!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogos" id="cs2_por" style="display: block;">
+        <div class="jogo_unico" id="cs2">
+            <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTE1sZe_fSDZFP33Is-lV31IorUe0Qh56Lrg&s" alt="cs2"></a>
+            <div class="texto_descricao">
+                <h1>Counter-Strike 2</h1>
+                <p>
+                    Counter-Strike é uma franquia que existe à mais de vinte anos, é um jogo FPS competitivo que possui vários mapas, armas e utilitários para garantir muita ação.
+                    <br><br>
+                    Há mais de duas décadas, o Counter-Strike oferece uma experiência competitiva de elite moldada por milhões de jogadores mundialmente. Agora, o próximo capítulo da história do CS vai começar. Isso é Counter-Strike 2.
+                    <br><br>
+                    Este é o primeiro jogo da série Counter-Strike que utiliza o motor de jogo Source 2 da Valve e apresenta grandes avanços tecnológicos desde a Global Offensive, como novas fumaças volumétricas baseadas em voxel e um novo conjunto de ferramentas para desenvolvimento mapas.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="jogos" id="cs2_eng" style="display: none;">
+        <div class="jogo_unico" id="cs22">
+            <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTE1sZe_fSDZFP33Is-lV31IorUe0Qh56Lrg&s" alt="cs2"></a>
+            <div class="texto_descricao">
+                <h1>Counter-Strike 2</h1>
+                <p>
+                    Counter-Strike is a franchise that has existed for over twenty years, it is a competitive FPS game that has several maps, weapons and utilities to guarantee a lot of action.
+                    <br><br>
+                    For more than two decades, Counter-Strike has delivered an elite competitive experience shaped by millions of players worldwide. Now, the next chapter in CS history will begin. This is Counter-Strike 2.
+                    <br><br>
+                    This is the first game in the Counter-Strike series to utilize Valve's Source 2 game engine and features major technological advancements since Global Offensive, such as new voxel-based volumetric smokes and a new set of tools for developing maps.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogos" id="red_por" style="display: block;">
+        <div class="jogo_unico" id="reddead">
+            <a><img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt="reddead"></a>
+            <div class="texto_descricao">
+                <h1>Red Dead Redemption II</h1>
+                <p>
+                    Estados Unidos, 1899.
+                    <br><br>
+                    Arthur Morgan e a gangue Van der Linde são bandidos em fuga. Com agentes federais e os melhores caçadores de recompensas no seu encalço, a gangue precisa roubar, assaltar e lutar para sobreviver nos Estados Unidos. Conforme divisões internas profundas ameaçam despedaçar a gangue, Arthur deve fazer uma escolha entre os seus próprios ideais e a lealdade à gangue que o criou.
+                    <br><br>
+                    Red Dead Redemption 2 também inclui acesso gratuito ao Red Dead Online. Nele, os jogadores assumem uma diversidade de ofícios, seja perseguindo criminosos como Caçador de Recompensa, estabelecendo um negócio como Mercador, escavando tesouros como Colecionador ou operando uma destilaria como Moonshiner.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogos" id="red_eng" style="display: none;">
+        <div class="jogo_unico" id="reddead2">
+            <a><img src="https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png" alt="reddead"></a>
+            <div class="texto_descricao">
+                <h1>Red Dead Redemption II</h1>
+                <p>
+                    United States, 1899.
+                    <br><br>
+                    Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters on their trail, the gang must steal, rob and fight to survive in the United States. As deep internal divisions threaten to tear the gang apart, Arthur must make a choice between his own ideals and loyalty to the gang that raised him.
+                    <br><br>
+                    Red Dead Redemption 2 also includes free access to Red Dead Online. In it, players take on a variety of jobs, whether chasing criminals as a Bounty Hunter, establishing a business as a Merchant, excavating treasure as a Collector or operating a distillery as a Moonshiner.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogos" id="dying_por" style="display: block;">
+        <div class="jogo_unico" id="dyinglight">
+            <a><img src="https://cdn1.epicgames.com/offer/2c42520d342a46d7a6e0cfa77b4715de/EGS_DyingLightStandardEdition_Techland_Editions_S2_1200x1600-49546d7deaaf160596e034613a2d2a93" alt="dyinglight"></a>
+            <div class="texto_descricao">
+                <h1>Dying Light</h1>
+                <p>
+                    Um jogo de ação e sobrevivência em primeira pessoa em um mundo aberto pós-apocalíptico tomado por zumbis comedores de carne humana. Atravesse uma cidade devastada por um vírus misterioso. Procure por suprimentos, crie armas e enfrente os infectados.
+                    <br><br>
+                    Durante o dia, os jogadores percorrem em um ambiente urbano expansivo invadido por um surto vicioso, procurando pelo mundo suprimentos e elaborando armas para se defender contra a crescente população infectada. À noite, o caçador torna-se caçado, os infectados tornam-se agressivos e mais perigosos. Mais assustador são os voláteis que aparecem somente após o anoitecer. Os jogadores devem usar tudo em seu poder para sobreviver até a primeira luz da manhã.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogos" id="dying_eng" style="display: none;">
+        <div class="jogo_unico" id="dyinglight2">
+            <a><img src="https://cdn1.epicgames.com/offer/2c42520d342a46d7a6e0cfa77b4715de/EGS_DyingLightStandardEdition_Techland_Editions_S2_1200x1600-49546d7deaaf160596e034613a2d2a93" alt="dyinglight"></a>
+            <div class="texto_descricao">
+                <h1>Dying Light</h1>
+                <p>
+                    A first-person action and survival game set in a post-apocalyptic open world taken over by flesh-eating zombies. Traverse a city devastated by a mysterious virus. Search for supplies, create weapons and face the infected.
+                    <br><br>
+                    During the day, players roam an expansive urban environment overrun by a vicious outbreak, scavenging the world for supplies and crafting weapons to defend against the growing infected population. At night, the hunter becomes the hunted, the infected become aggressive and more dangerous. More frightening are the volatiles that appear only after dark. Players must use everything in their power to survive until first light in the morning.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogos" id="dayz_por" style="display: block;">
+        <div class="jogo_unico" id="dayz">
+            <a><img src="https://image.api.playstation.com/vulcan/ap/rnd/202301/0312/z9AGStZnUt3o3nbxJUrCjkyM.png" alt="DayZ"></a>
+            <div class="texto_descricao">
+                <h1>DayZ</h1>
+                <p>
+                    Quanto você aguenta em um mundo pós-apocalíptico? Uma terra arrasada por "zumbis" infectados, onde você compete com outros sobreviventes por recursos limitados. Você vai ajudar estranhos em sua luta? Ou evitará traições como um lobo solitário? Esse é o DayZ. Essa é a sua história.
+                    <br><br>
+                    Sua missão? Sobreviver ao colapso da civilização pelo maior tempo possível. Lembre-se que a morte é permanente na cruel Chernorússia. Tudo que você tem ao reiniciar novamente são as memórias de seu último erro.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="jogos" id="dayz_eng" style="display: none;">
+        <div class="jogo_unico" id="dayz2">
+            <a><img src="https://image.api.playstation.com/vulcan/ap/rnd/202301/0312/z9AGStZnUt3o3nbxJUrCjkyM.png" alt="DayZ"></a>
+            <div class="texto_descricao">
+                <h1>DayZ</h1>
+                <p>
+                    How much can you handle in a post-apocalyptic world? A land scorched by infected "zombies", where you compete with other survivors for limited resources. Will you help strangers in their fight? Or will you avoid betrayal like a lone wolf? This is DayZ. This is your story.
+                    <br><br>
+                    Your mission? Survive the collapse of civilization for as long as possible. Remember that death is permanent in cruel Chernorussia. All you have when you restart again are the memories of your last mistake.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="separa">
+
+    <div class="sobre" id="sobre">
+        <p>
+            Este foi um site desenvolvido no curso de Jovens Talentos da IPM Sistemas, criado com o intuido de apresentar alguma coisa que eu gostasse muito, que no caso, foram meus jogos favoritos.
+        </p>
+    </div>
+    <br><br>
+    <footer class="header">
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <li><button class="botao"><a href="#">Início</a></button></li>
+                    <li><button onclick="rolarTela(this)" id="sobre2" class="botao"><a>Sobre</a></button></li>
+                    <li><button id="darkmode2" style="background: linear-gradient(135deg, rgb(60, 180, 8),rgb(75, 231, 122));"  id="darkmode" onclick="modoEscuro()" class="botao"><a>Modo Escuro</a></button></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
